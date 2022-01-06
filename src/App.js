@@ -1,19 +1,20 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Home from './screens/home';
 
 function App() {
   return (
     <>
       <Router>
-        <NavBar />
+        <Navbar />
         <Routes>
-          <Route path="/" exact />
+          <Route path='/' exact element={<Home />} />
         </Routes>
       </Router>
     </>
   );
-}
+};
 
 export default App;
